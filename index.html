@@ -394,7 +394,7 @@
     <!-- PRELOADER -->
     <div id="preloader">
         <div class="loader-ring"></div>
-        <div class="loader-text">INICIALIZANDO CONTROL ROOM...</div>
+        <div class="loader-text">INICIALIZANDO PROGRAMA: ECOLUMINA IRTRA...</div>
     </div>
 
     <!-- CURSOR PERSONALIZADO -->
@@ -405,7 +405,7 @@
     <header>
         <div class="brand">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            IRTRA / SYSTEM MONITOR
+            IRTRA / SYSTEM MONITOR: ECOLUMINA
         </div>
         <div class="status-pill">
             <div class="pulse-dot"></div>
@@ -457,8 +457,8 @@
                 </div>
                 <div class="sim-stage">
                     <div class="btn-group">
-                        <button class="action-btn" onclick="setSim('dia')">Sol (Día)</button>
-                        <button class="action-btn" onclick="setSim('noche')">Luna (Noche)</button>
+                        <button class="action-btn" onclick="setSim('dia')">Modo Día</button>
+                        <button class="action-btn" onclick="setSim('noche')">Modo Noche</button>
                         <button class="action-btn" onclick="triggerNode('led1')">PIR Movimiento</button>
                         <button class="action-btn" onclick="triggerNode('led2')">Ultrasónico Peatón</button>
                     </div>
@@ -469,7 +469,7 @@
                             <div id="led1" class="led-node"></div>
                         </div>
                         <div style="text-align: center;">
-                            <span style="font-size: 0.7rem; color: var(--text-muted); display: block; margin-bottom: 4px;">LED Ultrasonido</span>
+                            <span style="font-size: 0.7rem; color: var(--text-muted); display: block; margin-bottom: 4px;">LED Ultrasónico</span>
                             <div id="led2" class="led-node"></div>
                         </div>
                     </div>
@@ -539,7 +539,7 @@
     <!-- ENLACE A TINKERCAD -->
     <div>
         <!-- Reemplaza el enlace de href por el link público/compartible de tu Tinkercad -->
-        <a href="https://www.tinkercad.com/things/lvVoL5bcBH3-proyecto-4u/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=PhSmwJLypMFqq8vH7v00T9sGT2gIHzvMfb-dkUGFDWM&sharecode=Fp4U0xJChikYMTOQRpCqZQ79rF1R2De0lPvyM8LKjx4" target="_blank" class="link-btn">
+        <a href="https://canva.link/jjvqlp19mvw6z20" target="_blank" class="link-btn">
             ABRIR SIMULACIÓN EN TINKERCAD →
         </a>
     </div>
@@ -677,8 +677,8 @@
                 let res = "";
                 if (cmd === 'help') res = "Opciones: 'ods', 'hardware', 'status', 'clear'";
                 else if (cmd === 'ods') res = "ODS 7 (Energía) y ODS 11 (Comunidades).";
-                else if (cmd === 'hardware') res = "Arduino Uno R3 | LDR | PIR | HC-SR04";
-                else if (cmd === 'status') res = "Sistema IRTRA: Operativo.";
+                else if (cmd === 'hardware') res = "Arduino Uno R3, LDR, Sensor PIR, Sensor Ultrasónico HC-SR04, Diodos LED estándar";
+                else if (cmd === 'status') res = "Sistema Operativo EcoLumina: Preparado.";
                 else if (cmd === 'clear') {
                     output.innerHTML = "";
                     input.value = "";
