@@ -218,23 +218,29 @@
             }
         }
 
-        /* Contenedores de altura fija para Tarjetas 5 y 6 */
+        /* Ajuste de altura para equilibrar la Gráfica con la Imagen del Circuito */
         .chart-wrapper {
             position: relative;
-            height: 180px;
+            height: 280px;
             width: 100%;
+            margin-top: 10px;
         }
 
-        .circuit-wrapper {
-            height: 180px;
-            background: rgba(0,0,0,0.3);
-            border: 1px dashed var(--panel-border);
+        /* Contenedor del PDF en vivo */
+        .pdf-viewer-wrapper {
+            width: 100%;
+            height: 260px;
             border-radius: 12px;
-            padding: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            overflow: hidden;
+            border: 1px solid var(--panel-border);
+            background: rgba(0,0,0,0.4);
+            margin: 12px 0;
+        }
+
+        .pdf-viewer-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         /* --- COMPONENTES --- */
@@ -361,7 +367,6 @@
             margin-top: 10px;
         }
 
-        /* Estilo para la imagen de la infografía */
         .infografia-img-container {
             width: 100%;
             border-radius: 12px;
@@ -425,7 +430,11 @@
                 </div>
                 <h2 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 10px;">Optimizando la Eficiencia Energética en Senderos Nocturnos</h2>
                 <p style="color: var(--text-muted); line-height: 1.5; font-size: 0.9rem;">
-                    [AGREGAR AQUÍ: Contexto sobre el desperdicio energético por luminarias continuas en el parque IRTRA Petapa y cómo este sistema adaptativo responde activamente a la demanda real mediante detección infrarroja y ultrasónica.]
+                    La iluminación nocturna de un parque recreativo debe resolver un equilibrio entre seguridad, 
+                    orientación, experiencia del visitante, eficiencia energética y protección del ambiente. En un 
+                    espacio como el Parque Mundo Petapa, donde existen recorridos, atracciones, áreas de 
+                    convivencia y circulación peatonal, la iluminación puede analizarse como una infraestructura 
+                    tecnológica capaz de responder al comportamiento real del lugar. 
                 </p>
             </div>
         </article>
@@ -503,7 +512,7 @@
             </div>
         </article>
 
-        <!-- BENTO 5 -->
+        <!-- BENTO 5: CONSUMO ENERGÉTICO (Ajustado en Altura) -->
         <article class="bento-item span-6">
             <div>
                 <div class="card-label">
@@ -516,36 +525,31 @@
             </div>
         </article>
 
-        <!-- BENTO 6 -->
-        <!-- BENTO 06: CIRCUITO TINKERCAD -->
-<article class="bento-item span-6">
-    <div>
-        <div class="card-label">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-            06. Circuito & Esquemático
-        </div>
-        <h3 style="font-size: 1rem; margin-bottom: 6px;">Simulación en Tinkercad</h3>
-        <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 12px;">
-            Diseño electrónico compuesto por Arduino Uno, sensores de presencia/distancia (PIR y HC-SR04), fotorresistencia (LDR) y diódos LED estándar.
-        </p>
+        <!-- BENTO 6: CIRCUITO TINKERCAD -->
+        <article class="bento-item span-6">
+            <div>
+                <div class="card-label">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                    06. Circuito & Esquemático
+                </div>
+                <h3 style="font-size: 1rem; margin-bottom: 6px;">Simulación en Tinkercad</h3>
+                <p style="color: var(--text-muted); font-size: 0.82rem; margin-bottom: 12px;">
+                    Diseño electrónico compuesto por Arduino Uno, sensores de presencia/distancia (PIR y HC-SR04), fotorresistencia (LDR) y diódos LED estándar.
+                </p>
 
-        <!-- CAPTURA DEL CIRCUITO -->
-        <div style="width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--panel-border); background: rgba(0,0,0,0.3); margin-bottom: 12px;">
-            <!-- Reemplaza 'circuito_tinkercad.png' por el nombre real de tu captura -->
-            <img src="circuito_tinkercad.png" alt="Circuito en Tinkercad" style="width: 100%; height: auto; display: block; object-fit: cover;">
-        </div>
-    </div>
+                <div style="width: 100%; border-radius: 10px; overflow: hidden; border: 1px solid var(--panel-border); background: rgba(0,0,0,0.3); margin-bottom: 12px;">
+                    <img src="circuito_tinkercad.png" alt="Circuito en Tinkercad" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                </div>
+            </div>
 
-    <!-- ENLACE A TINKERCAD -->
-    <div>
-        <!-- Reemplaza el enlace de href por el link público/compartible de tu Tinkercad -->
-        <a href="https://canva.link/jjvqlp19mvw6z20" target="_blank" class="link-btn">
-            ABRIR SIMULACIÓN EN TINKERCAD →
-        </a>
-    </div>
-</article>
+            <div>
+                <a href="https://canva.link/jjvqlp19mvw6z20" target="_blank" class="link-btn">
+                    ABRIR SIMULACIÓN EN TINKERCAD →
+                </a>
+            </div>
+        </article>
 
-        <!-- BENTO 7 -->
+        <!-- BENTO 7: PODCAST (Mayor Altura) -->
         <article class="bento-item span-6">
             <div>
                 <div class="card-label">
@@ -553,21 +557,20 @@
                     07. Podcast Explicativo
                 </div>
                 <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 10px;">Análisis técnico del circuito:</p>
-                <!-- CÓDIGO CORREGIDO -->
                 <iframe 
                     width="100%" 
-                    height="180" 
+                    height="280" 
                     src="https://www.youtube.com/embed/E34akOWDuuU" 
                     title="Podcast Explicativo" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowfullscreen 
-                    style="border-radius: 12px; border: 1px solid var(--panel-border);">
+                    style="border-radius: 12px; border: 1px solid var(--panel-border); margin-top: 5px;">
                 </iframe>
             </div>
         </article>
 
-        <!-- BENTO 8 -->
+        <!-- BENTO 8: DOCUMENTACIÓN CON VISOR PDF (Mayor Altura) -->
         <article class="bento-item span-6">
             <div>
                 <div class="card-label">
@@ -575,16 +578,21 @@
                     08. Documentación Formal
                 </div>
                 <h3 style="font-size: 0.95rem; margin-bottom: 4px;">Informe Técnico de Investigación</h3>
-                <p style="color: var(--text-muted); font-size: 0.8rem;">Formato APA disponible para descarga.</p>
+                <p style="color: var(--text-muted); font-size: 0.8rem;">Visualización previa del documento:</p>
+                
+                <!-- VISOR DE PDF INCORPORADO -->
+                <div class="pdf-viewer-wrapper">
+                    <iframe src="ruta_del_informe.pdf#toolbar=0" title="Informe Técnico PDF"></iframe>
+                </div>
             </div>
             <div>
-                <a href="ruta_del_informe.pdf" target="_blank" class="link-btn">
+                <a href="ruta_del_informe.pdf" target="_blank" download class="link-btn">
                     DESCARGAR INFORME (PDF) →
                 </a>
             </div>
         </article>
 
-        <!-- BENTO 9: INFOGRAFÍA (AL FINAL) -->
+        <!-- BENTO 9: INFOGRAFÍA -->
         <article class="bento-item span-12">
             <div>
                 <div class="card-label">
@@ -597,12 +605,11 @@
                 </p>
                 
                 <div class="infografia-img-container">
-                    <!-- CAMBIA 'tu_infografia.png' POR EL NOMBRE DE TU ARCHIVO DE IMAGEN -->
                     <img src="InfografiaTICS.jpg" alt="Infografía del Proyecto IRTRA">
                 </div>
             </div>
             <div style="margin-top: 14px;">
-                <a href="tu_infografia.png" target="_blank" class="link-btn">
+                <a href="InfografiaTICS.jpg" target="_blank" class="link-btn">
                     ABRIR INFOGRAFÍA EN TAMAÑO COMPLETO →
                 </a>
             </div>
